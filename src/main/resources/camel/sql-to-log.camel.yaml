@@ -10,5 +10,7 @@
         databaseName: test
         delay: 5000
       steps:
+        - process:
+            ref: "#class:org.example.project.sqltolog.CustomSqlRowProcessor"
         - log:
-            message: ${body}
+            message: "${body}"
